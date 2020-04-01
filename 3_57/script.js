@@ -10,3 +10,11 @@ class User {
   }
 };
 
+class Comment {
+  constructor(user,post, comment, date) {
+    this.user = user,
+    this.post = post,
+    this.comment = comment,
+    this.date = date
+  }
+};
