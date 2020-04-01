@@ -54,3 +54,40 @@ console.log(user);
 console.log(post);
 console.log(user2);
 console.log(comment);
+
+
+let posts = [];
+
+function newPost(i) {
+  return new Post(i+2, user.id,  "text" + i, 0);
+};
+
+
+for(let i = 0; 6 > i; i++) {
+  posts[i] = newPost(i);
+};
+
+
+function toPrint(post) {
+  console.log(post);
+};
+posts.forEach(toPrint);
+
+
+function like (post, postId, isLiked) {
+  if(post.id === postId) {
+    isLiked ? post.likes++ : post.likes--;
+    console.log(post);
+  };
+};
+
+let postId = 4;
+
+let isLiked = true;
+
+for(let i = 0; i < posts.length; i++) {
+  like(posts[i], postId, isLiked);
+};
+
+
+
