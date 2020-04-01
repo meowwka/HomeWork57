@@ -18,3 +18,14 @@ class Comment {
     this.date = date
   }
 };
+
+class Post {
+  constructor(id, userId,  descriprtion, likes) {
+    this.id = id,
+    this.userId = userId,
+    // так можно обращаться к конкретному юзеру
+    this.descriprtion = descriprtion,
+    this.likes = likes;
+  }
+};
+
